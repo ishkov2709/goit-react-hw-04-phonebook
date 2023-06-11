@@ -29,9 +29,7 @@ export const App = () => {
     setContacts([{ id: nanoid(), name, number }, ...contacts]);
   };
 
-  const contactsFilterHandler = ({ currentTarget }) => {
-    const { value } = currentTarget;
-
+  const contactsFilterHandler = ({ currentTarget: { value } }) => {
     setFilter(value);
   };
 
