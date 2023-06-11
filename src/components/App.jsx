@@ -22,7 +22,7 @@ export const App = () => {
   }, [contacts, firstLoad]);
 
   const addContact = (name, number) => {
-    if (contacts.find(el => el.name === name)) {
+    if (contacts.find(el => el.name.toLowerCase() === name.toLowerCase())) {
       return alert(`${name} is already in contacts`);
     }
 
